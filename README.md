@@ -29,4 +29,9 @@ Install Guide:
 3) Kindly change the wp-config.php file, the database detail.
 4) Change the .htaccess file Rewrite Base.
 5) In SQL-> wp_option, change the URL Address to your domain.
-5) Open with Wamp/Xamp.
+6) Open with Wamp/Xamp.
+7) To login, goTo /wp-admin.php for admin login.
+
+Wordpress Admin ID:
+ID: admin
+Password: 12345
