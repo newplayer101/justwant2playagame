@@ -1,0 +1,29 @@
+# If you are getting errors you may need to comment this out like ..
+# Options +FollowSymLinks
+Options +SymLinksIfOwnerMatch
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # RewriteBase instructions
+  # Change RewriteBase dependent on how your shop is accessed as below.
+  # http://www.mysite.com = RewriteBase /
+  # http://www.mysite.com/catalog/ = RewriteBase /catalog/ 
+  # http://www.mysite.com/catalog/shop/ = RewriteBase /catalog/shop/
+
+  # Change RewriteBase using the instructions above  
+  RewriteBase /justwan2playagame/
+  RewriteRule ^([a-z0-9/-]+)-c-([0-9_]+).html$ index.php [NC,L,QSA]
+  RewriteRule ^([a-z0-9/-]+)-m-([0-9]+).html$ index.php [NC,L,QSA]
+
+</IfModule>
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /justwan2playagame/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /justwan2playagame/index.php [L]
+</IfModule>
+
+# END WordPress
